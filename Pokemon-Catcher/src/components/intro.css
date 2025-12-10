@@ -1,0 +1,40 @@
+.intro-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 3s forwards;
+}
+
+.intro-pokeball {
+  width: 120px;
+  animation: spin 2s infinite linear;
+}
+
+.intro-title {
+  margin-top: 20px;
+  font-size: 32px;
+  animation: glow 2s infinite alternate;
+}
+
+
+@keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px red; }
+  to { text-shadow: 0 0 20px yellow; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
