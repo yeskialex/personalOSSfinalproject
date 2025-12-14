@@ -18,11 +18,7 @@ export const updatePokemon = (id, data) => axios.put(`${API_URL}/CaughtPokemons/
 // --- Team API ---
 
 export const getUserTeams = (firebaseId) => {
-  return axios.get(`${API_URL}/teams`, {
-    params: {
-      firebaseId,
-    },
-  });
+  return axios.get(`${API_URL}/teams?firebaseId=${firebaseId}`);
 };
 
 export const createTeam = (teamData) => {
